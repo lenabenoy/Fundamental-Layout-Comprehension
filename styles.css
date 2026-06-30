@@ -1,0 +1,37 @@
+/* Core Layout Grid System */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.layout-wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 15px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Presentational Colors for Visualization */
+.layout-header, .layout-footer {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-left { background-color: #e2e8f0; padding: 20px; }
+.main-content { background-color: #cbd5e1; padding: 20px; }
+.sidebar-right { background-color: #e2e8f0; padding: 20px; }
+
+/* Responsive break for mobile screens */
+@media (max-width: 768px) {
+    .layout-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
